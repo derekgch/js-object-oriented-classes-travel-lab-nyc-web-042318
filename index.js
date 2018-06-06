@@ -13,6 +13,10 @@ class Route {
     this.end = end;
   }
   blocksTravelled(){
+    let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue', 'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue'];
+    this.start.horizontal = eastWest.indexOf(this.start.horizontal)+1;
+    this.end.horizontal = eastWest.indexOf(this.end.horizontal)+1;
+
     if (this.start.horizontal === "Park"){this.start.horizontal = 5};
     if (this.end.horizontal === "Park"){this.end.horizontal = 5};
     // if (this.end.vertical === "Park"){this.end.vertical = 5};
